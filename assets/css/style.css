@@ -1,0 +1,139 @@
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #282828;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.frame {
+    width: 80vw;
+    height: 50vw;
+    border-radius: 5%;
+    overflow: hidden;
+    position: relative;
+}
+
+.frame .picture {
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/background.png");
+    z-index: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    filter: grayscale(100%);
+}
+
+.frame .social.linkedin:hover,
+.frame .social.linkedin:focus,
+.frame .social.email:hover,
+.frame .social.email:focus,
+.frame .social.github:hover,
+.frame .social.github:focus,
+.frame .social.resume:hover,
+.frame .social.resume:focus {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.frame .social.linkedin:hover i,
+.frame .social.linkedin:focus i,
+.frame .social.email:hover i,
+.frame .social.email:focus i,
+.frame .social.github:hover i,
+.frame .social.github:focus i,
+.frame .social.resume:hover i,
+.frame .social.resume:focus i {
+    opacity: 1;
+    font-size: 20vw;
+    margin: 15vw 33vw;
+}
+
+.frame .social.linkedin:hover span,
+.frame .social.linkedin:focus span,
+.frame .social.email:hover span,
+.frame .social.email:focus span,
+.frame .social.github:hover span,
+.frame .social.github:focus span,
+.frame .social.resume:hover span,
+.frame .social.resume:focus span {
+    display: none;
+}
+
+.frame .social {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 2vw;
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.frame .social a {
+    display: contents;
+    text-decoration: none;
+}
+
+.frame .social a span {
+    color: #fff;
+    position: absolute;
+}
+
+.frame .social a i {
+    color: #fff;
+    margin: 7px;
+    opacity: 0;
+}
+
+.frame .social.linkedin {
+    bottom: 26vw;
+    background-color: #007bb5;
+}
+
+.frame .social.linkedin a span {
+    left: .65em;
+}
+
+.frame .social.email {
+    bottom: 18vw;
+    background-color: #D32E2A;
+}
+
+.frame .social.email a span {
+    left: .55em;
+}
+
+.frame .social.github {
+    bottom: 10vw;
+    background-color: #313131;
+}
+
+.frame .social.github a span {
+    left: .59em;
+}
+
+.frame .social.resume {
+    bottom: 2vw;
+    background-color: #55acee;
+}
+
+.frame .social.resume a span {
+    left: .7em;
+}
+
+.frame:hover .picture,
+body .frame.focus .picture {
+    transition: all 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform: scale(1.3) rotate(10deg);
+}
